@@ -17,7 +17,7 @@ This project showcases the capabilities of combining OpenAI's GPT-4 with Streaml
 - **Natural Language to SQL**: Uses GPT-4 to transform user's natural language input into an SQL query.
 - **Streamlit Interface**: Provides a simple and intuitive interface for users to input their queries.
 - **SQLite Backend**: Uses SQLite as the database backend to store and query the financial data.
-  
+
 ## Prerequisites
 
 - Python 3.6 or above
@@ -26,31 +26,35 @@ This project showcases the capabilities of combining OpenAI's GPT-4 with Streaml
 ## Installation
 
 1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/NikhilSehgal123/Azure-OpenAI-SQL.git
-    ```
+
+   ```bash
+   git clone git@github.com:gilmargr/Azure-OpenAI-SQL.git
+   ```
 
 2. **Set up a Virtual Environment** (optional but recommended):
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
-    ```
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows, use: .venv\Scripts\activate
+   ```
 
 3. **Install the Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. **Set up Environment Variables**:
-   
+
    If you're using any external services like Azure or APIs, make sure you have the credentials set up as environment variables or stored safely.
 
 ## Usage
 
 1. **Run the Streamlit App**:
-    ```bash
-    streamlit run main_app_streamlit.py
-    ```
+
+   ```bash
+   streamlit run main_app_streamlit.py
+   ```
 
 2. Open the displayed URL in your browser, usually `http://localhost:8501`.
 
