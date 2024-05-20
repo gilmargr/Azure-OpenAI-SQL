@@ -16,7 +16,7 @@ client = AzureOpenAI(
 
 
 def get_completion_from_messages(
-    system_message, user_message, model="gpt-35t", temperature=0, max_tokens=3000
+    system_message, user_message, model="gpt-4", temperature=0, max_tokens=3000
 ) -> str:
     messages = [
         {"role": "system", "content": system_message},

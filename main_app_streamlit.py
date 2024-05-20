@@ -28,26 +28,29 @@ user_message = st.text_input("Enter your message:")
 
 if user_message:
     # Format the system message with the schema
-    formatted_system_message = SYSTEM_MESSAGE.format(schema=schemas["finances"])
+    formatted_system_message = SYSTEM_MESSAGE.format(
+        schema=schemas["finances"])
 
     #  Use GPT-4 to generate the SQL query
-    response = get_completion_from_messages(formatted_system_message, user_message)
+    response = get_completion_from_messages(
+        formatted_system_message, user_message)
 
     # validate if response is in json format. otherwise just responde with the text returned
     try:
-        json_response = json.loads(response)
-        query = json_response["query"]
+        if response.error is not None:
+            json_response = json.loads(response)
+            query = json_response["query"]
 
-        # Display the generated SQL query
-        st.write("Generated SQL Query:")
-        st.code(query, language="sql")
+            # Display the generated SQL query
+            st.write("Generated SQL Query:")
+            st.code(query, language="sql")
 
-        try:
-            # Run the SQL query and display the results
-            sql_results = query_database(query, conn)
-            st.write("Query Results:")
-            st.dataframe(sql_results)
-        except Exception as e:
-            st.write(f"An error occurred: {e}")
+            try:
+                # Run the SQL query and display the results
+              sql_results = query_database(query, conn)
+              st.write("Query Results:")
+              st.dataframe(sql_results)
+            except Exception as e:
+              st.write(f"An error occurred: {e}")
     except:
         st.write(response)

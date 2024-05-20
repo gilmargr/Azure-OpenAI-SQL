@@ -1,0 +1,8 @@
+{
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--userns=keep-id:uid=1000,gid=1000"],
+  "remoteUser": "vscode",
+  "containerUser": "vscode",
+  "updateRemoteUserUID": true,
+  "context": ".."
+}
