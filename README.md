@@ -50,23 +50,23 @@ This project showcases the capabilities of combining OpenAI's GPT-4 with Streaml
 
 ## Usage
 
-0. Create the database:
+1. Create the database:
 
 ```bash
 python sql_db.py
 ```
 
-1. **Run the Streamlit App**:
+2. **Run the Streamlit App**:
 
    ```bash
    streamlit run main_app_streamlit.py
    ```
 
-2. Open the displayed URL in your browser, usually `http://localhost:8501`.
+3. Open the displayed URL in your browser, usually `http://localhost:8501`.
 
-3. Type in your natural language query into the input box, like "Show me all expenses greater than 1000".
+4. Type in your natural language query into the input box, like "Show me all expenses greater than 1000".
 
-4. View the generated SQL query and the results from the database.
+5. View the generated SQL query and the results from the database.
 
 ## How It Works
 
