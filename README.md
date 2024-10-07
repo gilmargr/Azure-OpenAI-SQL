@@ -50,6 +50,12 @@ This project showcases the capabilities of combining OpenAI's GPT-4 with Streaml
 
 ## Usage
 
+0. Create the database:
+
+```bash
+python sql_db.py
+```
+
 1. **Run the Streamlit App**:
 
    ```bash
