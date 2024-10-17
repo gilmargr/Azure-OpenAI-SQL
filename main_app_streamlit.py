@@ -18,7 +18,7 @@ conn = sql_db.create_connection()
 
 # Schema Representation for finances table
 schemas = sql_db.get_schema_representation()
-print(schemas)
+print(f"Schemas {schemas}")
 
 st.title("SQL Query Generator")
 st.write("Enter your message to generate SQL and view results.")
@@ -28,7 +28,8 @@ user_message = st.text_input("Enter your message:")
 
 if user_message:
     # Format the system message with the schema
-    formatted_system_message = SYSTEM_MESSAGE.format(schema=schemas["finances"])
+    formatted_system_message = SYSTEM_MESSAGE.format(schema=schemas)
+    print(f"Formaterd system message: {formatted_system_message}")
 
     #  Use GPT-4 to generate the SQL query
     response = get_completion_from_messages(formatted_system_message, user_message)
